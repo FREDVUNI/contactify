@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-content">
         <div className="text-container">
-          <h1>Welcome to Contactify</h1>
+          <h1>Welcome to Contactify </h1>
           <p>Manage and organize your contacts with ease</p>
           <button className="btn-primary">Get Started</button>
         </div>

@@ -1,17 +1,20 @@
-/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-body{
+
+body {
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
 }
+
 #app {
   max-width: 100%;
 }
-/* Header.css */
+
+/* Header Styles */
 .header {
   background-color: #f0f0f0;
   color: #333;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,38 +22,96 @@ body{
 
 .header-logo {
   font-size: 1.5rem;
+  font-weight: 100;
 }
-
+.header-logo a{
+  text-decoration: none;
+  color: #333;
+}
 .header-nav {
   display: flex;
 }
 
 .header-nav-item {
   margin-left: 1rem;
-  color: #fff;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate the bars when the menu is active */
+.change1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change2 {
+  opacity: 0;
+}
+
+.change3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* Show/hide the navigation menu */
+.header-nav {
+  display: flex;
+  align-items: center;
+  /* Add this line to center the hamburger icon vertically */
+}
+
+.header-nav-item {
+  margin-left: 1rem;
+  color: #333;
   text-decoration: none;
 }
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
-  .header-logo {
-    font-size: 1.2rem;
+  .header {
+    padding: 1rem 2rem;
+    /* Adjust the padding as needed */
   }
 
   .header-nav {
+    display: none;
     flex-direction: column;
     align-items: center;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    left: 0;
   }
 
-  .header-nav-item {
-    margin: 0.5rem 0;
+  .header-nav.show {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    display: flex;
   }
 }
+
 /* Hero.css */
 .hero {
   background-color: #f0f0f0;
   height: 300px;
-  /* Adjust the height as per your preference */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,9 +122,20 @@ body{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
+}
+.container {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .hero-content h1 {
@@ -115,7 +187,9 @@ body{
   .hero-content p {
     font-size: 1rem;
   }
-
+  .hero-content img{
+    display: none;
+  }
   .btn-primary {
     font-size: 0.9rem;
   }
@@ -125,6 +199,7 @@ body{
     margin-top: 1rem;
   }
 }
+
 /* Footer.css */
 .footer {
   background-color: #f0f0f0;

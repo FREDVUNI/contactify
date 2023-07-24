@@ -7,12 +7,14 @@ import Contacts from '../components/Contacts'
 
 const Home = () => {
   return (
-    <>
-        <Header/>
-        <Hero/>
-        <AddContact/>
-        <Contacts/>
-        <Footer/>
+     <>
+      <Header />
+      <Hero />
+      <div className="container"> 
+        <AddContact />
+        <Contacts />
+      </div>
+      <Footer />
     </>
   )
 }
