@@ -1,0 +1,32 @@
+export const contacts = [
+    {
+        "name":"Fred",
+        "email":"fredvuni809@gmail.com",
+        "photo":"",
+        "date_created":""
+    },
+    {
+        "name":"stella",
+        "email":"stella@gmail.com",
+        "photo":"",
+        "date_created":""
+    },
+    {
+        "name":"Esther",
+        "email":"esther@gmail.com",
+        "photo":"",
+        "date_created":""
+    },
+    {
+        "name":"Mike",
+        "email":"mike@gmail.com",
+        "photo":"",
+        "date_created":""
+    },
+    {
+        "name":"Matthew",
+        "email":"matt@gmail.com",
+        "photo":"",
+        "date_created":""
+    },
+]
