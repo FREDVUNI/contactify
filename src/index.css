@@ -126,8 +126,8 @@ body {
   margin: 0 auto;
 }
 .container {
-  display: flex;
-  max-width: 80%;
+  justify-content: space-between;
+  max-width: 85%;
   margin: 0 auto;
 }
 
@@ -154,7 +154,6 @@ body {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
@@ -212,5 +211,174 @@ body {
 @media screen and (max-width: 768px) {
   .footer {
     font-size: 0.9rem;
+  }
+}
+.add-contact {
+  padding: 2rem;
+}
+
+.add-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.add-contact-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 0 20 50%;
+  padding: 0.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .form-group {
+    flex: 0 0 100%;
+  }
+}
+.contacts {
+  padding: 2rem;
+}
+
+.contacts h2 {
+  margin-bottom: 1rem;
+}
+
+.contacts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.contact-item {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  display: flex;
+}
+
+.contact-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.fixed-column img{
+  height: 80px;
+  width: 80px;
+}
+.contact-details h3 {
+  margin: 0;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .contacts-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* ... (existing styles) ... */
+
+/* AddContact Styles */
+.add-contact-container {
+  max-width: 85%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  /* Add spacing between form inputs and the table */
+}
+
+.form-group {
+  flex-basis: calc(33.33% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contacts-container {
+  max-width: 95%;
+  margin: 1rem auto;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  table-layout: fixed;
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.contacts-table th {
+  background-color: #f2f2f2;
+}
+
+.contacts-table td.fixed-column {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.contacts-table td.fixed-column {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .add-contact-form {
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex-basis: 100%;
+  }
+
+  .contacts-table td.fixed-column {
+    position: relative;
+    left: initial;
+    background-color: initial;
+    z-index: initial;
+    text-align: left;
   }
 }
