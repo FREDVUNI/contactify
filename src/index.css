@@ -1,7 +1,50 @@
 /* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-*{
+body{
   font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#app {
+  max-width: 100%;
+}
+/* Header.css */
+.header {
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav-item {
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .header-logo {
+    font-size: 1.2rem;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-nav-item {
+    margin: 0.5rem 0;
+  }
 }
 /* Hero.css */
 .hero {
@@ -84,8 +127,8 @@
 }
 /* Footer.css */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #f0f0f0;
+  color: #333;
   padding: 1rem;
   text-align: center;
 }
