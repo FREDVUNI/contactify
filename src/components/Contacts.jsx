@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{ useState } from 'react'
+import Contact from './Contact'
+import { contacts } from '../data/contacts'
 
 const Contacts = () => {
+    const [people,setPeople] = useState(contacts);
   return (
-    <div>Contacts</div>
+    <>
+    <li>{console.log(people)}</li>
+    </>
   )
 }
 
