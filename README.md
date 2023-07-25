@@ -47,5 +47,3 @@ Contributions to Contactify are welcome! If you find any issues or have ideas fo
 - The fonts used in the app are from the Google Fonts library.
 
 ---
-
-Thank you for checking out Contactify! We hope you find it useful for managing your contacts. If you have any questions or feedback, please don't hesitate to reach out. Happy organizing!
