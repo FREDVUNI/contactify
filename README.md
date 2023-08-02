@@ -7,6 +7,7 @@ Contactify is a simple web application that allows users to manage and organize 
 - Add new contacts: Users can add new contacts to the app by providing their name, email, and phone number.
 - Display contacts: The app displays the list of saved contacts in a table format, showing their names, email addresses, and phone numbers.
 - Responsive design: Contactify is designed to be responsive and can adapt to different screen sizes, making it accessible on various devices.
+- Contacts are stored in localStorage
 
 ## Technologies Used
 
