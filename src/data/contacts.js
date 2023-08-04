@@ -1,4 +1,4 @@
-export const contacts = [
+export const contactsData = [
     {
         "name":"Fred",
         "email":"fredvuni809@gmail.com",

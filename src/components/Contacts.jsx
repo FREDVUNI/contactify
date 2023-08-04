@@ -1,14 +1,15 @@
 import React from 'react';
 import contactImage from '../assets/contact.png';
+import { contactsData } from '../data/contacts';
 
 const Contacts = () => {
-  const contactsData = [
-    {
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      phone: '123-456-7890',
-    },
-  ];
+  // const contactsData = [
+  //   {
+  //     name: 'John Doe',
+  //     email: 'john.doe@example.com',
+  //     phone: '123-456-7890',
+  //   },
+  // ];
 
   return (
     <div className="contacts-container">
@@ -18,7 +19,6 @@ const Contacts = () => {
             <th className="fixed-column">Image</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Phone</th>
           </tr>
         </thead>
         <tbody>
