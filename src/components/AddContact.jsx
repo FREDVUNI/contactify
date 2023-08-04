@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{ useReducer } from 'react';
+import { contactReducer } from '../reducers';
 
 const AddContact = () => {
+  const [dispatch,state] = useReducer(contactReducer)
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
