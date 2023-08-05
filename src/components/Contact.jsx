@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Contact = () => {
+const Contact = ({contact}) => {
   return (
-    <div>Contact</div>
-  )
-}
+    <tr>
+      <td className="fixed-column">
+        <img src={contact.photo} alt="Contact" />
+      </td>
+      <td>{contact.name}</td>
+      <td>{contact.email}</td>
+      <td>{contact.phone}</td>
+    </tr>
+  );
+};
 
-export default Contact
+export default Contact;

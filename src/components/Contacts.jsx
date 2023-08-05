@@ -1,6 +1,7 @@
 import React from 'react';
 import contactImage from '../assets/contact.png';
 import { contactsData } from '../data/contacts';
+import Contact from './Contact';
 
 const Contacts = () => {
   // const contactsData = [
@@ -23,14 +24,7 @@ const Contacts = () => {
         </thead>
         <tbody>
           {contactsData.map((contact, index) => (
-            <tr key={index}>
-              <td className="fixed-column">
-                <img src={contact.photo} alt="Contact" />
-              </td>
-              <td>{contact.name}</td>
-              <td>{contact.email}</td>
-              <td>{contact.phone}</td>
-            </tr>
+            <Contact contact={contact} key={index}/>
           ))}
         </tbody>
       </table>
