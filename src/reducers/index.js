@@ -1,7 +1,7 @@
 import { contactActions } from "../actions";
-export const initialState = { contact: "" };
-export const contactReducer = (state, actions) => {
-  switch (actions.type) {
+export const initialState = [];
+export const contactReducer = (state, action) => {
+  switch (action.type) {
     case contactActions.ADD_CONTACT:
       alert("yes");
     default:
