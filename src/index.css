@@ -347,7 +347,9 @@ body {
   padding: 12px 15px;
   text-align: center;
 }
-
+.contacts-table small{
+  display: block;
+}
 .contacts-table th {
   background-color: #f2f2f2;
 }
