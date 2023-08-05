@@ -25,7 +25,7 @@ const Contacts = () => {
           {contactsData.map((contact, index) => (
             <tr key={index}>
               <td className="fixed-column">
-                <img src={contactImage} alt="Contact" />
+                <img src={contact.photo} alt="Contact" />
               </td>
               <td>{contact.name}</td>
               <td>{contact.email}</td>

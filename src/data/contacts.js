@@ -2,31 +2,31 @@ export const contactsData = [
     {
         "name":"Fred",
         "email":"fredvuni809@gmail.com",
-        "photo":"",
-        "date_created":""
+        "photo":'https://robohash.org/1.png',
+        "date_created":Date.now()
     },
     {
         "name":"stella",
         "email":"stella@gmail.com",
-        "photo":"",
-        "date_created":""
+        "photo":'https://robohash.org/1.png',
+        "date_created":Date.now()
     },
     {
         "name":"Esther",
         "email":"esther@gmail.com",
-        "photo":"",
-        "date_created":""
+        "photo":'https://robohash.org/1.png',
+        "date_created":Date.now()
     },
     {
         "name":"Mike",
         "email":"mike@gmail.com",
-        "photo":"",
-        "date_created":""
+        "photo":'https://robohash.org/1.png',
+        "date_created":Date.now()
     },
     {
         "name":"Matthew",
         "email":"matt@gmail.com",
-        "photo":"",
-        "date_created":""
+        "photo":'https://robohash.org/1.png',
+        "date_created":Date.now()
     },
 ]
