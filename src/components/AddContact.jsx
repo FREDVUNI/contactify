@@ -3,20 +3,27 @@ import { contactReducer, initialState } from "../reducers";
 import { contactActions } from "../actions";
 
 const AddContact = () => {
-  const [state,dispatch] = useReducer(contactReducer, initialState);
+  const [state, dispatch] = useReducer(contactReducer, initialState);
   const [inputs, setInputs] = useState({
     name: "",
+    email: "",
+    phone: "",
   });
 
   const addContact = (inputs) => {
-    return { id: Date.now(), name: inputs.name };
+    return {
+      id: Date.now(),
+      name: inputs.name,
+      email: inputs.email,
+      phone: inputs.phone,
+    };
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
   };
-  console.log(state)
+  console.log(state);
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
@@ -38,11 +45,20 @@ const AddContact = () => {
             id="email"
             name="email"
             placeholder="Enter email"
+            value={inputs.email}
+            onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
           />
         </div>
         <div className="form-group">
           <label htmlFor="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter phone" />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter phone"
+            value={inputs.phone}
+            onChange={(e) => setInputs({ ...inputs, phone: e.target.value })}
+          />
         </div>
         <div className="form-group">
           <button className="btn-primary">Add Contact</button>
