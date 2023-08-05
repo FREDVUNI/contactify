@@ -13,7 +13,7 @@ const Contacts = () => {
   // ];
 
   return (
-    <div className="contacts-container">
+    <div className="add-contact">
       <table className="contacts-table">
         <thead>
           <tr>
