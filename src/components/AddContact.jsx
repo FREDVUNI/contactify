@@ -31,7 +31,7 @@ const AddContact = () => {
             onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
           />
         </div>
-        {/* <div className="form-group">
+        <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -43,7 +43,7 @@ const AddContact = () => {
         <div className="form-group">
           <label htmlFor="phone">Phone</label>
           <input type="tel" id="phone" name="phone" placeholder="Enter phone" />
-        </div> */}
+        </div>
         <div className="form-group">
           <button className="btn-primary">Add Contact</button>
         </div>
