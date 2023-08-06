@@ -23,7 +23,7 @@ const AddContact = () => {
     e.preventDefault();
     dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
   };
-  console.log(state);
+  // console.log(state);
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>

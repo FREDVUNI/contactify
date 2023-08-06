@@ -1,6 +1,8 @@
-import React from 'react';
-import { contactsData } from '../data/contacts';
-import Contact from './Contact';
+import React, { useState, useReducer,useEffect } from "react";
+import { contactsData } from "../data/contacts";
+import Contact from "./Contact";
+import { contactReducer, initialState } from "../reducers";
+import { contactActions } from "../actions";
 
 const Contacts = () => {
   // const contactsData = [
@@ -10,7 +12,9 @@ const Contacts = () => {
   //     phone: '123-456-7890',
   //   },
   // ];
+  const [state,dispatch] = useReducer(contactReducer,initialState)
 
+  console.log(state);
   return (
     <div className="add-contact">
       <table className="contacts-table">
@@ -23,7 +27,7 @@ const Contacts = () => {
         </thead>
         <tbody>
           {contactsData.map((contact, index) => (
-            <Contact contact={contact} key={index}/>
+            <Contact contact={contact} key={index} />
           ))}
         </tbody>
       </table>
