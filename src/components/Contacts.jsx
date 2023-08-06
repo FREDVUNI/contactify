@@ -1,5 +1,4 @@
 import React from 'react';
-import contactImage from '../assets/contact.png';
 import { contactsData } from '../data/contacts';
 import Contact from './Contact';
 
