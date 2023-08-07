@@ -1,8 +1,7 @@
-import React, { useState, useReducer,useEffect } from "react";
+import React, { useReducer,useEffect } from "react";
 import { contactsData } from "../data/contacts";
 import Contact from "./Contact";
 import { contactReducer, initialState } from "../reducers";
-import { contactActions } from "../actions";
 
 const Contacts = () => {
   // const contactsData = [
@@ -13,6 +12,11 @@ const Contacts = () => {
   //   },
   // ];
   const [state,dispatch] = useReducer(contactReducer,initialState)
+
+  useEffect(() => {
+    dispatch({ type: "GET_CONTACTS", payload: contactsData });
+  }, []);
+
 
   console.log(state);
   return (
