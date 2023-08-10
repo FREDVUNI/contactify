@@ -38,6 +38,7 @@ const AddContact = () => {
             type="text"
             id="name"
             name="name"
+            value={inputs.name}
             placeholder="Enter name"
             onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
           />
