@@ -11,15 +11,14 @@ const Contacts = () => {
   //     phone: '123-456-7890',
   //   },
   // ];
-  const fetchData = JSON.parse(localStorage.getItem("contacts"));
 
   const [state, dispatch] = useReducer(contactReducer, initialState);
 
   useEffect(() => {
-    dispatch({ type: "GET_CONTACTS", payload: contactsData });
-  }, []);
+    dispatch({ type: "GET_CONTACTS", payload: initialState });
+  }, [initialState]);
 
-  // console.log(fetchData);
+  console.log(state);
   return (
     <div className="add-contact">
       <table className="contacts-table">
