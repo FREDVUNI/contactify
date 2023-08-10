@@ -24,6 +24,7 @@ const AddContact = () => {
     dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
   };
   // console.log(state);
+  localStorage.setItem("contacts",JSON.stringify(state))
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
