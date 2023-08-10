@@ -22,6 +22,9 @@ const AddContact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
+    inputs.email = ""
+    inputs.name = ""
+    inputs.phone = ""
   };
   // console.log(state);
   localStorage.setItem("contacts",JSON.stringify(state))
