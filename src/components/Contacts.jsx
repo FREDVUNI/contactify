@@ -19,7 +19,7 @@ const Contacts = () => {
     dispatch({ type: "GET_CONTACTS", payload: contactsData });
   }, []);
 
-  console.log(state);
+  // console.log(fetchData);
   return (
     <div className="add-contact">
       <table className="contacts-table">
