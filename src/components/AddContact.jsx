@@ -16,6 +16,7 @@ const AddContact = () => {
       name: inputs.name,
       email: inputs.email,
       phone: inputs.phone,
+      photo:`https://robohash.org/${id}.png`
     };
   };
 
