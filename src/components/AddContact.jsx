@@ -11,12 +11,13 @@ const AddContact = () => {
   });
 
   const addContact = (inputs) => {
+    let photoId = Date.now()
     return {
       id: Date.now(),
       name: inputs.name,
       email: inputs.email,
       phone: inputs.phone,
-      photo:`https://robohash.org/${id}.png`
+      photo:`https://robohash.org/${photoId}.png`
     };
   };
 
