@@ -16,7 +16,7 @@ const Contacts = () => {
 
   useEffect(() => {
     dispatch({ type: "GET_CONTACTS", payload: initialState });
-  }, [initialState]);
+  }, []);
 
   console.log(state);
   return (
