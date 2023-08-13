@@ -30,7 +30,7 @@ const Contacts = () => {
           </tr>
         </thead>
         <tbody>
-          {contactsData.map((contact, index) => (
+          {state.map((contact, index) => (
             <Contact contact={contact} key={index} />
           ))}
         </tbody>
