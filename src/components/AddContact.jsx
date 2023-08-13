@@ -11,25 +11,25 @@ const AddContact = () => {
   });
 
   const addContact = (inputs) => {
-    let photoId = Date.now()
+    let photoId = Date.now();
     return {
       id: Date.now(),
       name: inputs.name,
       email: inputs.email,
       phone: inputs.phone,
-      photo:`https://robohash.org/${photoId}.png`
+      photo: `https://robohash.org/${photoId}.png`,
     };
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
-    inputs.email = ""
-    inputs.name = ""
-    inputs.phone = ""
+    inputs.email = "";
+    inputs.name = "";
+    inputs.phone = "";
   };
   // console.log(state);
-  localStorage.setItem("contacts",JSON.stringify(state))
+  localStorage.setItem("contacts", JSON.stringify(state));
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
