@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from "react";
 import { contactReducer, initialState } from "../reducers";
 import { contactActions } from "../actions";
+import { v4 as uuidv4 } from "uuid";
 
 const AddContact = () => {
   const [state, dispatch] = useReducer(contactReducer, initialState);
@@ -11,7 +12,7 @@ const AddContact = () => {
   });
 
   const addContact = (inputs) => {
-    let photoId = Date.now();
+    let photoId = uuidv4();
     return {
       id: Date.now(),
       name: inputs.name,
