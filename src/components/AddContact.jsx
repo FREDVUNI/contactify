@@ -18,6 +18,7 @@ const AddContact = () => {
       name: inputs.name,
       email: inputs.email,
       phone: inputs.phone,
+      date_created: new Date(Date.now()).toLocaleString(),
       photo: `https://robohash.org/${photoId}.png`,
     };
   };

@@ -8,7 +8,7 @@ const Contact = ({ contact }) => {
       </td>
       <td>
         {contact.name}
-        <small>{new Date(contact.date_created).toLocaleString()}</small>
+        <small>{contact.date_created}</small>
       </td>
       <td>{contact.email}</td>
       <td>{contact.phone}</td>
