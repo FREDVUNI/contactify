@@ -27,6 +27,7 @@ const Contacts = () => {
             <th className="fixed-column">Image</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Phone</th>
           </tr>
         </thead>
         <tbody>
