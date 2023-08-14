@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from "react";
-import { contactsData } from "../data/contacts";
+// import { contactsData } from "../data/contacts";
 import Contact from "./Contact";
 import { contactReducer, initialState } from "../reducers";
 
