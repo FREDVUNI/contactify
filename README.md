@@ -39,7 +39,7 @@ Contributions to Contactify are welcome! If you find any issues or have ideas fo
 
 ## screenshot
 
-![image](https://github.com/FREDVUNI/contactify/assets/41730664/5bd1714e-19a1-450f-adb4-b3cc1a4960b2)
+![image](https://github.com/FREDVUNI/contactify/assets/41730664/204d8231-1c97-4103-a793-11d12f6df6ed)
 
 ## Acknowledgments
 
