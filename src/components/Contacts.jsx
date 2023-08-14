@@ -1,24 +1,10 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useContext } from "react";
 // import { contactsData } from "../data/contacts";
 import Contact from "./Contact";
-import { contactReducer, initialState } from "../reducers";
+import { ContactsContext } from "../context";
 
 const Contacts = () => {
-  // const contactsData = [
-  //   {
-  //     name: 'John Doe',
-  //     email: 'john.doe@example.com',
-  //     phone: '123-456-7890',
-  //   },
-  // ];
-
-  const [state, dispatch] = useReducer(contactReducer, initialState);
-
-  useEffect(() => {
-    dispatch({ type: "GET_CONTACTS", payload: initialState });
-  }, []);
-
-  console.log(state);
+  const { state } = useContext(ContactsContext);
   return (
     <div className="add-contact">
       <table className="contacts-table">

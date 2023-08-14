@@ -1,37 +1,8 @@
-import React, { useReducer, useState } from "react";
-import { contactReducer, initialState } from "../reducers";
-import { contactActions } from "../actions";
-import { v4 as uuidv4 } from "uuid";
+import React, { useContext } from "react";
+import { ContactsContext } from "../context";
 
 const AddContact = () => {
-  const [state, dispatch] = useReducer(contactReducer, initialState);
-  const [inputs, setInputs] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-
-  const addContact = (inputs) => {
-    let photoId = uuidv4();
-    return {
-      id: Date.now(),
-      name: inputs.name,
-      email: inputs.email,
-      phone: inputs.phone,
-      date_created: new Date(Date.now()).toLocaleString(),
-      photo: `https://robohash.org/${photoId}.png`,
-    };
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
-    inputs.email = "";
-    inputs.name = "";
-    inputs.phone = "";
-  };
-  // console.log(state);
-  localStorage.setItem("contacts", JSON.stringify(state));
+  const { inputs, setInputs, handleSubmit } = useContext(ContactsContext);
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
