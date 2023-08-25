@@ -10,6 +10,8 @@ export const ContactsProvider = ({ children }) => {
     email: "",
     phone: "",
   });
+  const [error, setError] = useState("");
+
   const [state, dispatch] = useReducer(contactReducer, initialState);
   const addContact = (inputs) => {
     let photoId = uuidv4();
@@ -23,9 +25,20 @@ export const ContactsProvider = ({ children }) => {
     };
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch({ type: contactActions.ADD_CONTACT, payload: addContact(inputs) });
+    if (!inputs.name || !inputs.email || !inputs.phone) {
+      setError("All fields are required.");
+      return; 
+    }
+    try {
+      dispatch({
+        type: contactActions.ADD_CONTACT,
+        payload: addContact(inputs),
+      });
+    } catch (error) {
+      setError("All fields are required.");
+    }
     inputs.email = "";
     inputs.name = "";
     inputs.phone = "";
@@ -41,7 +54,7 @@ export const ContactsProvider = ({ children }) => {
   }, []);
   return (
     <ContactsContext.Provider
-      value={{ handleSubmit, inputs, setInputs, state }}
+      value={{ handleSubmit, inputs, setInputs, state, error }}
     >
       {children}
     </ContactsContext.Provider>

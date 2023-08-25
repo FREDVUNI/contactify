@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { ContactsContext } from "../context";
 
 const AddContact = () => {
-  const { inputs, setInputs, handleSubmit } = useContext(ContactsContext);
+  const { inputs, setInputs, handleSubmit, error } =
+    useContext(ContactsContext);
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
+      {error && <span>{error}</span>}
       <form className="add-contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
