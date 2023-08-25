@@ -37,7 +37,7 @@ export const ContactsProvider = ({ children }) => {
         payload: addContact(inputs),
       });
     } catch (error) {
-      setError("All fields are required.");
+      setError("Something went wrong.");
     }
     inputs.email = "";
     inputs.name = "";
