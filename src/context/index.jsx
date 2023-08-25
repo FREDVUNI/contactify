@@ -14,7 +14,7 @@ export const ContactsProvider = ({ children }) => {
 
   const nameRegex = /^[a-zA-Z\s]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^[0-9]+$/;
+  const phoneRegex = /^[0-9 ]+$/;
 
   const [state, dispatch] = useReducer(contactReducer, initialState);
   const addContact = (inputs) => {
