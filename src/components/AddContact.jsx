@@ -7,7 +7,7 @@ const AddContact = () => {
   return (
     <div className="add-contact">
       <h2>Add Contact</h2>
-      {error && <span>{error}</span>}
+      {error && <span className="text-danger">{error}</span>}
       <form className="add-contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
