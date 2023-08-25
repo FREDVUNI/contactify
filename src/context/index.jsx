@@ -12,6 +12,10 @@ export const ContactsProvider = ({ children }) => {
   });
   const [error, setError] = useState("");
 
+  const nameRegex = /^[a-zA-Z\s]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9]+$/;
+
   const [state, dispatch] = useReducer(contactReducer, initialState);
   const addContact = (inputs) => {
     let photoId = uuidv4();
@@ -31,12 +35,25 @@ export const ContactsProvider = ({ children }) => {
       setError("All fields are required.");
       return;
     }
+    if (!nameRegex.test(inputs.name)) {
+      setError("Invalid name format.");
+      return;
+    }
+    if (!emailRegex.test(inputs.email)) {
+      setError("Invalid email format.");
+      return;
+    }
+    if (!phoneRegex.test(inputs.phone)) {
+      setError("Invalid phone format.");
+      return;
+    }
     try {
       dispatch({
         type: contactActions.ADD_CONTACT,
         payload: addContact(inputs),
       });
       setInputs({ name: "", email: "", phone: "" });
+      setError("");
     } catch (error) {
       setError("Something went wrong.");
     }
