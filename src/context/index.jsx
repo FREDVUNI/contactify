@@ -29,19 +29,17 @@ export const ContactsProvider = ({ children }) => {
     e.preventDefault();
     if (!inputs.name || !inputs.email || !inputs.phone) {
       setError("All fields are required.");
-      return; 
+      return;
     }
     try {
       dispatch({
         type: contactActions.ADD_CONTACT,
         payload: addContact(inputs),
       });
+      setInputs({ name: "", email: "", phone: "" });
     } catch (error) {
       setError("Something went wrong.");
     }
-    inputs.email = "";
-    inputs.name = "";
-    inputs.phone = "";
   };
   localStorage.setItem("contacts", JSON.stringify(state));
 
