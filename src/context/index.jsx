@@ -29,6 +29,8 @@ export const ContactsProvider = ({ children }) => {
     };
   };
 
+  const emailExists =
+    state && state.some((contact) => contact.email === inputs.email);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!inputs.name || !inputs.email || !inputs.phone) {
@@ -45,6 +47,10 @@ export const ContactsProvider = ({ children }) => {
     }
     if (!phoneRegex.test(inputs.phone)) {
       setError("Invalid phone format.");
+      return;
+    }
+    if (emailExists) {
+      setError("user with this email address already exists.");
       return;
     }
     try {
