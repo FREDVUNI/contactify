@@ -31,6 +31,8 @@ export const ContactsProvider = ({ children }) => {
 
   const emailExists =
     state && state.some((contact) => contact.email === inputs.email);
+  const phoneExists =
+    state && state.some((contact) => contact.phone === inputs.phone);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!inputs.name || !inputs.email || !inputs.phone) {
@@ -51,6 +53,10 @@ export const ContactsProvider = ({ children }) => {
     }
     if (emailExists) {
       setError("user with this email address already exists.");
+      return;
+    }
+    if (phoneExists) {
+      setError("user with this phone number already exists.");
       return;
     }
     try {
