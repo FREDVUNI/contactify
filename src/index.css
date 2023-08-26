@@ -345,6 +345,42 @@ body {
   margin: 0; 
   padding: 0;
 }
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .contacts-table thead {
+    display: none;
+  }
+
+  .contacts-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+
+  .contacts-table tbody td {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+}
 
 .contacts-table {
   width: 100%;
